@@ -1,0 +1,16 @@
+<h2>Search Authors</h2>
+<form action="/author" method="GET">
+  <label for="search_authors">Name</label>
+  <input
+    id="search_authors"
+    type="text"
+    name="searchedAuthorName"
+    value="<%= searchOptions.name %>"
+  />
+  <button type="submit">Search</button>
+</form>
+<br />
+<% authors.forEach(author => { %>
+<!-- name here refers to the name defined in the author.js under models -->
+<div><%= author.name %></div>
+<% }) %>
